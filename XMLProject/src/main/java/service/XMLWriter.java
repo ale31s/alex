@@ -25,23 +25,6 @@ import javax.xml.stream.XMLStreamWriter;
  */
 public class XMLWriter {
 
-    public static void main(String[] args) throws FileNotFoundException, XMLStreamException {
-
-//        try (FileOutputStream out = new FileOutputStream("book.xml")) {
-//            XMLWriter("book.txt", out);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-        File xsdFile = new File("book_xsd.xsd");
-        File xmlFile = new File("book.xml");
-        XmlValidator xmlv = new XmlValidator();
-        boolean a = xmlv.validateXMLSchema(xsdFile, xmlFile);
-        if (a) {
-            System.out.println("validated xml ");
-        }
-        XMLReader.ReadXml();
-    }
-
     public  void XMLWriter(String filename, OutputStream out) throws XMLStreamException, FileNotFoundException {
         File file = new File(filename);
         XMLOutputFactory output = XMLOutputFactory.newInstance();
